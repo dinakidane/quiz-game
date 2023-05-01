@@ -148,27 +148,27 @@ let questions = [
     currentQuestion = 0;
     totalScore.innerHTML = questions.length;
     questionText.innerHTML = questions[currentQuestion].question;
-    trueBtn.innerHTML = questions[currentQuestion].answers[0].option
-    trueBtn.onclick = () => {
+    option1Btn.innerHTML = questions[currentQuestion].answers[0].option
+    option1Btn.onclick = () => {
         if(questions[currentQuestion].answers[0].answer) {
-            if(score < 10) {
+            if(score < 3) {
                 score++;
             }
         }
         userScore.innerHTML = score;
-        if (currentQuestion < 4) {
+        if (currentQuestion < 2) {
             next();
         }
     }
     falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
     falseBtn.onclick = () => {
         if (questions[currentQuestion].answers[1].answer) {
-            if(score < 10) {
+            if(score < 3) {
                 score++
             }
         }
         userScore.innerHTML = score;
-        if(currentQuestion < 4) {
+        if(currentQuestion < 2) {
             next();
         }
     }
